@@ -1,0 +1,42 @@
+.List-Todo-Container{
+    button{
+        cursor: pointer;
+    }
+
+    
+    .List-Todo-Contents{
+        width: 400px;
+        margin: 0px auto;
+        margin-top: 20px;
+        text-align: left;
+        
+        div:first-child  {  
+           margin-top: 10px;
+           border-top: solid 1px #ccc;
+        }
+
+        .Todo-Child{
+            position: relative;
+            border-bottom: solid 1px #ccc;
+            padding: 10px 0 10px 40px;
+    
+            
+           
+            .Todo-Child-Content{
+               width: 400px; 
+            }
+            .Todo-Child-Bbtn{        
+                display: inline-block;
+                position: absolute;
+                right: 28px;
+                .Todo-Child-Editbtn{
+                    margin: 0 10px;
+                    width: 45px;
+                }
+            }
+            
+        }
+        
+    }
+}
+
