@@ -1,0 +1,26 @@
+.user-container{
+    .user-title{
+        font-size: 30px;
+        color: antiquewhite;
+    }
+    .list-users{
+        border: solid 1px #ccc;
+        width: 300px;
+        margin: 20px auto;
+        .single-user{
+            
+                height: 40px;
+                width: 300px;
+                margin: 0 auto;
+                border-bottom: solid 1px #ccc;
+                line-height: 40px;
+                text-align: center;
+                /* position: relative; */
+                textleft: 40px;
+                /* margin-left: 20px; */
+                /* display: block; */
+                /* left: 40px; */
+            
+        }
+    }
+}

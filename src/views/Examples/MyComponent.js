@@ -33,6 +33,8 @@ class MyComponent extends React.Component {
     render() {
         return (
             <>
+                <div style={{ color: "#f1c40f" }}>JOB DESCRIPTION</div>
+                <div>---------------</div>
                 <AddComponent
                     addNewJobs={this.addNewJobs}
                 />

@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './TodoApps.scss'
 import Addtodo from './Addtodo';
 import { toast } from 'react-toastify';
+import Color from '../HOC/Color';
 
 
-class ListTodo extends Component {
+class ListTodo extends React.Component {
     state = {
         listTodos: [
             { id: 'todo1', title: 'Learing React' },
@@ -63,54 +64,57 @@ class ListTodo extends Component {
         let { listTodos, editTodo } = this.state
         let isEmpty = Object.keys(editTodo).length === 0;
         return (
-            <div className='List-Todo-Container'>
-                <Addtodo
-                    addNewTodo={this.addNewTodo}
-                />
-                <div className='List-Todo-Contents'>
-                    {listTodos && listTodos.length > 0 &&
-                        listTodos.map((item, index) => {
-                            return (
-                                <div className='Todo-Child' key={item.id}>
-                                    {isEmpty === true ?
-                                        <span className='Todo-Child-Content'>
-                                            {index + 1}. {item.title}
-                                        </span>
-                                        :
-                                        <>
-                                            {editTodo.id === item.id ?
-                                                <span>
-                                                    {index + 1}. <input
-                                                        onChange={(event) => this.handleEditSaveTodohandleOnChangeEditSaveTodo(event)}
-                                                        value={editTodo.title}
-                                                    />
-                                                </span>
-                                                :
-                                                <span>{index + 1}. {item.title}</span>
-                                            }
-                                        </>
-                                    }
-                                    <div className='Todo-Child-Bbtn'>
-                                        <button className='Todo-Child-Editbtn'
-                                            onClick={() => this.handleEditSaveTodo(item)}
-                                        >
-                                            {isEmpty === false && editTodo.id === item.id ?
-                                                'Save ' : 'Edit'
-                                            }
-                                        </button>
-                                        <button className='Todo-Child-Deletebtn'
-                                            onClick={() => this.handleClickDelete(item)}
-                                        >Delete</button>
+            <>
+                <p>Simple Todo App From DT_NINETEEN</p>
+                <div className='List-Todo-Container'>
+                    <Addtodo
+                        addNewTodo={this.addNewTodo}
+                    />
+                    <div className='List-Todo-Contents'>
+                        {listTodos && listTodos.length > 0 &&
+                            listTodos.map((item, index) => {
+                                return (
+                                    <div className='Todo-Child' key={item.id}>
+                                        {isEmpty === true ?
+                                            <span className='Todo-Child-Content'>
+                                                {index + 1}. {item.title}
+                                            </span>
+                                            :
+                                            <>
+                                                {editTodo.id === item.id ?
+                                                    <span>
+                                                        {index + 1}. <input
+                                                            onChange={(event) => this.handleEditSaveTodohandleOnChangeEditSaveTodo(event)}
+                                                            value={editTodo.title}
+                                                        />
+                                                    </span>
+                                                    :
+                                                    <span>{index + 1}. {item.title}</span>
+                                                }
+                                            </>
+                                        }
+                                        <div className='Todo-Child-Bbtn'>
+                                            <button className='Todo-Child-Editbtn'
+                                                onClick={() => this.handleEditSaveTodo(item)}
+                                            >
+                                                {isEmpty === false && editTodo.id === item.id ?
+                                                    'Save ' : 'Edit'
+                                                }
+                                            </button>
+                                            <button className='Todo-Child-Deletebtn'
+                                                onClick={() => this.handleClickDelete(item)}
+                                            >Delete</button>
+                                        </div>
                                     </div>
-                                </div>
-                            )
+                                )
 
-                        })
+                            })
 
-                    }
+                        }
 
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
