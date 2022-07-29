@@ -11,7 +11,7 @@ class Home extends React.Component {
         this.props.deleteUserRedux(user)
     }
     handleAddTitle = () => {
-        let title = { id: Math.floor(Math.random() * 1000), name: 'nothing more' }
+
         this.props.addUserRedux()
     }
     render() {

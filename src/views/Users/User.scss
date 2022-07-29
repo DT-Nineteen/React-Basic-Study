@@ -8,7 +8,7 @@
         width: 300px;
         margin: 20px auto;
         .single-user{
-            
+                cursor: pointer;
                 height: 40px;
                 width: 300px;
                 margin: 0 auto;
@@ -23,4 +23,8 @@
             
         }
     }
+}
+
+button{
+    cursor: pointer;
 }

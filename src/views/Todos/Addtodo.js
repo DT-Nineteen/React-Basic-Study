@@ -27,6 +27,7 @@ class Addtodo extends React.Component {
         this.setState({
             title: "",
         })
+
     }
     render() {
         let { title } = this.state
@@ -34,7 +35,7 @@ class Addtodo extends React.Component {
             <>
                 <div className='List-Todo-addDOC'>
                     <input
-                        value={title} type='text'
+                        value={title} type='span'
                         onChange={(event) => this.handleOnchangeTitle(event)}
                     />
                     <button type='button'

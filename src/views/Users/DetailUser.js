@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
+import './User.scss'
 
 
 class DetailUser extends React.Component {
@@ -36,7 +37,7 @@ class DetailUser extends React.Component {
                             <img src={user.avatar} />
                         </div>
                         <div>
-                            <button type="button" onClick={() => this.handleBackToListUser()}> Back</button>
+                            <button type="button" onClick={() => this.handleBackToListUser()} > Back</button>
                         </div>
                     </>
                 }
